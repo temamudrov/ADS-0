@@ -1,9 +1,8 @@
 // Copyright 2021 NNTU-CS
 
 int gcd(int a, int b) {
-    int nod = 0;
-	for (int i = 1; i <= a; i++)
-		if (a % i == 0 && b % i == 0)
-			nod = i;
-	return nod;
+    if (b == 0)
+            return a;
+    else
+            return gcd (b, a % b);
 }
